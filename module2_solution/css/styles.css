@@ -1,0 +1,101 @@
+/* Base styles */
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 1.75em;
+}
+
+.row {
+  width: 90%;
+  margin: auto;
+  overflow: auto;
+}
+
+.row > div {
+  background-color: lightgray;
+  border: 2px solid black;
+  margin: 10px;
+  width: 31%;
+  float: left;
+}
+
+.row > div > div {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+  border: none;
+}
+
+#chickenHeader,
+#beefHeader,
+#sushiHeader {
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 150px;
+  text-align: center;
+  position: relative;
+  float: right;
+  margin: 0;
+  font-size: 1.25em;
+}
+
+#chickenHeader {
+  background-color: salmon;
+}
+
+#beefHeader {
+  background-color: brown;
+  color: white;
+}
+
+#sushiHeader {
+  background-color: tan;
+}
+
+.frame {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+/* Large device */
+
+@media (min-width: 992px) {
+  /* not used since css above is the default large device */
+}
+
+/* Medium device */
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  #chicken,
+  #beef {
+    width: 47%;
+  }
+
+  #sushi {
+    width: 96.5%;
+  }
+}
+
+/* Small device */
+@media (max-width: 767px) {
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  #chicken,
+  #beef,
+  #sushi {
+    width: 96%;
+  }
+}

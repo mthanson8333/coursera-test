@@ -1,0 +1,166 @@
+/** Note to reviewers **/
+
+/* Instructor asked that we add color to the large scrolling area.  Not sure
+   what the purpose was, or maybe I didn't understand it.  I did not add
+   any additional color to scrolling areas. 
+
+   Instructor asked we set the background color of th sliding menu differrent 
+   from the rest.  I did not do this since I was already using four colors: 
+   navy, light blue, alice blue, and white.  I did add borders around the 
+   sliding menu so it stands out.
+
+   I'm 59-years old.  My eye sight is not as good as it used to be.  I 
+   enlarged the font.  In a real app I would have added a font sizing
+   button for the readers.  In mobile view mode, I decreased the font, but I
+   did increase the line-height.
+
+   I also made the toggle button a little taller.
+*/
+
+/** GLOBAL SETTINGS **/
+
+/* Web safe fonts */
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: navy;
+}
+
+body {
+  color: navy;
+  background-color: white;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: aliceblue;
+}
+
+.navbar-brand h1 {
+  /* Restaurant name */
+  color: navy;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/** END HEADER **/
+
+/** MAIN CONTENT **/
+
+#home-tiles {
+  background-color: lightblue;
+}
+/** END MAIN CONTENT **?
+  
+/********** All other device sizes above extra small **********/
+@media (min-width: 768px) {
+  /** HEADER **/
+  .navbar-brand {
+    height: 100px;
+  }
+  .navbar-brand h1 {
+    font-size: 3em;
+  }
+
+  #nav-list {
+    display: none;
+  }
+
+  /** END HEADER **/
+
+  /** MAIN CONTENT **/
+
+  #main-content h2,
+  h3 {
+    font-weight: bold;
+  }
+
+  #main-content h2 {
+    font-size: 3em;
+  }
+
+  #main-content h3 {
+    font-size: 2em;
+  }
+
+  #main-content p {
+    font-size: 2em;
+  }
+
+  #home-tiles {
+    margin-top: 50px;
+  }
+
+  /** END MAIN CONTENT **/
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /** Header **/
+  .navbar-brand {
+    height: 80px;
+  }
+  .navbar-brand h1 {
+    font-size: 2em;
+  }
+
+  .navbar-header button.navbar-toggle,
+  .navbar-header .icon-bar {
+    border: 1px solid navy;
+  }
+
+  #nav-list {
+    margin-top: 10px;
+    display: block;
+    border-top: 2px solid lightblue;
+  }
+
+  #nav-list li {
+    border-bottom: 2px solid lightblue;
+    border-left: 2px solid lightblue;
+    border-right: 2px solid lightblue;
+  }
+  #nav-list a {
+    color: navy;
+    text-align: center;
+  }
+  #nav-list a:hover {
+    background-color: white;
+  }
+
+  #collapsable-nav a {
+    /** Collapsed nav menu text **/
+    font-size: 2em;
+  }
+
+  .navbar-toggle {
+    margin-top: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /** End Header **/
+
+  /** Main Content **/
+  #main-content h2 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+
+  #main-content h3 {
+    font-size: 1.5em;
+  }
+
+  #main-content p {
+    font-size: 1.5em;
+    line-height: 1.7em;
+  }
+
+  #home-tiles {
+    margin-top: 20px;
+  }
+
+  /** End Main Content **/
+}
